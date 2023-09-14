@@ -7,20 +7,41 @@ import swal from 'sweetalert';
 const Home = () => {
 
     const [allCourse, setAllCourse] = useState([]);
-    
+
     const [selectedCourse, setSelectedCourse] = useState([]);
+
+    const [remaining , setRemaining] = useState(20);
+
+    const [totalCredit, setTotalCredit] = useState(0);
 
     useEffect(() => {
         fetch("./data.json")
             .then(res => res.json())
             .then(data => setAllCourse(data))
-    },[]);
+    }, []);
 
 
     const handleSelectCourse = (course) => {
-       setSelectedCourse([...selectedCourse, course])
-    }
-    console.log(selectedCourse);
+        const isExist = selectedCourse.find(item => item.id === course.id);
+    
+        if (isExist) {
+            return swal('Taken');
+        } else {
+            const totalCreditsSelected = selectedCourse.reduce((total, item) => total + item.credit_time, 0);
+            const newTotalCredits = totalCreditsSelected + course.credit_time;
+    
+            if (newTotalCredits > 20) {
+                alert("Cannot select more courses. Total credits exceed the limit (20 credits).");
+            } else {
+                setSelectedCourse([...selectedCourse, course]);
+                setTotalCredit(newTotalCredits);
+                setRemaining(20 - newTotalCredits);
+            }
+        }
+    };
+    
+    
+
 
 
     return (
@@ -36,17 +57,19 @@ const Home = () => {
                                 <p className='text-center mb-3'>{course.description}</p>
                                 <div className='flex justify-between'>
                                     <h4 className='ml-3 font-medium'>Price: {course.price}</h4>
-                                    <h4 className='font-medium'>Credit: {course.credit_time}</h4>
+                                    <h4 className='font-medium'>Credit: {course.credit_time} hr</h4>
                                 </div>
-                                
-                                <button  
-                                onClick={ () => handleSelectCourse (course)} className='bg-indigo-600 mt-4 p-2 px-24 rounded-lg mx-auto text-white font-semibold text-lg'>Select</button>
+
+                                <button
+                                    onClick={() => handleSelectCourse(course)} className='bg-indigo-600 mt-4 p-2 px-24 rounded-lg mx-auto text-white font-semibold text-lg'>Select</button>
                             </div>
                         ))
                     }
                 </div>
                 <div className='w-72 h-min-[100px]'>
-                    <Cart selectedCourse={selectedCourse}></Cart>
+                    <Cart selectedCourse={selectedCourse}
+                    remaining={remaining}
+                    totalCredit={totalCredit}></Cart>
                 </div>
             </div>
         </div>

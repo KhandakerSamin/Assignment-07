@@ -4,7 +4,7 @@
         "course_name": "Python Basics",
         "description": "For Python beginners. Covers variables, data types, control structures, functions.",
         "price": "$149.99",
-        "credit_time": "5 hours",
+        "credit_time": 5,
         "img": "https://i.ibb.co/sFbqQxP/Rectangle-2.png"
     },
     {
@@ -12,7 +12,7 @@
         "course_name": "Web Dev Fundamentals",
         "description": "HTML, CSS, JavaScript basics for interactive web pages. Can learn basic of web design",
         "price": "$199.99",
-        "credit_time": "7 hours",
+        "credit_time": 7,
         "img": "https://i.ibb.co/LZfPwC3/Rectangle-2-6.png"
     },
     {
@@ -20,7 +20,7 @@
         "course_name": "C++ Basics",
         "description": "Enhance C++ skills with multithreading, data structures, design patterns.",
         "price": "$249.99",
-        "credit_time": "4 hours",
+        "credit_time": 4,
         "img": "https://i.ibb.co/XJPy8zy/Rectangle-2-4.png"
     },
     {
@@ -28,7 +28,7 @@
         "course_name": "Data Science with Python",
         "description": "Data science and machine learning using Python. Analyze data, build models.",
         "price": "$299.99",
-        "credit_time": "8 hours",
+        "credit_time": 8,
         "img": "https://i.ibb.co/27KXLzR/Rectangle-3.png"
     },
     {
@@ -36,7 +36,7 @@
         "course_name": "Full-Stack Bootcamp",
         "description": "Master React, Node.js, MongoDB. Create dynamic web applications. It is most demanding",
         "price": "$399.99",
-        "credit_time": "10 hours",
+        "credit_time": 10,
         "img": "https://i.ibb.co/mFz7kQL/Rectangle-2-5.png"
     },
     {
@@ -44,7 +44,7 @@
         "course_name": "JavaScript Essentials",
         "description": "Core JavaScript concepts for web development: variables, functions, DOM etc.",
         "price": "$119.99",
-        "credit_time": "3 hours",
+        "credit_time": 3,
         "img": "https://i.ibb.co/4JY3GKT/js-es-lp-hero.png"
     },
     {
@@ -52,7 +52,7 @@
         "course_name": "C Programming Basics",
         "description": "Start C programming journey. Covers syntax, data types, control structures.",
         "price": "$169.99",
-        "credit_time": "9 hours",
+        "credit_time": 9,
         "img": "https://i.ibb.co/2yYgWtF/Rectangle-2-2.png"
     },
     {
@@ -60,7 +60,7 @@
         "course_name": "SQL Database Fundamentals",
         "description": "SQL database basics: queries, data management, schema design.",
         "price": "$139.99",
-        "credit_time": "6 hours",
+        "credit_time": 6,
         "img": "https://i.ibb.co/4gm9KKJ/Rectangle-2-1.png"
     },
     {
@@ -68,7 +68,8 @@
         "course_name": "Python for Data Analysis",
         "description": "Python data analysis with Pandas and Matplotlib. Visualize datasets. Python also easy.",
         "price": "$189.99",
-        "credit_time": "1 hour",
+        "credit_time": 1,
         "img": "https://i.ibb.co/rcH0HMy/Rectangle-2-3.png"
     }
 ]
+
