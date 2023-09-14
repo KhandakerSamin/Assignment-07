@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/sFbqQxP/Rectangle-2.png",
+        "course_name": "Python Basics",
+        "credit_time": "5 hours",
+        "price": "$149.99",
+        "description": "Learn the basics of Python programming, including variables, data types, control structures, and functions. This course is suitable for beginners and will provide a solid foundation for further Python development."
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/LZfPwC3/Rectangle-2-6.png",
+        "course_name": "Web Dev Fundamentals",
+        "credit_time": "7 hours",
+        "price": "$199.99",
+        "description": "Master the essential web development skills with this comprehensive course. You'll delve into HTML for structure, CSS for styling, and JavaScript for interactivity. By the end, you'll be able to create your own interactive web pages."
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co/XJPy8zy/Rectangle-2-4.png",
+        "course_name": "C++ Basics",
+        "credit_time": "4 hours",
+        "price": "$249.99",
+        "description": "Take your C++ skills to the next level with this advanced course. Explore topics such as multithreading, data structures, and object-oriented design patterns. This course is ideal for experienced C++ developers looking to enhance their expertise."
+    },
+    {
+        "id": 4,
+        "img": "https://ibb.co/zhfKL3C",
+        "course_name": "Data Science with Python",
+        "credit_time": "8 hours",
+        "price": "$299.99",
+        "description": "Dive into the world of data science and machine learning using Python. Learn how to analyze data, build predictive models, and extract valuable insights. This course is perfect for those aspiring to become data scientists or machine learning engineers."
+    },
+    {
+        "id": 5,
+        "img": "https://ibb.co/cXTd0zG",
+        "course_name": "Full-Stack Bootcamp",
+        "credit_time": "10 hours",
+        "price": "$399.99",
+        "description": "Become a full-stack web developer in this intensive bootcamp. You'll cover front-end and back-end development using popular technologies like React, Node.js, and databases like MongoDB. Get ready to build dynamic web applications from scratch."
+    },
+    {
+        "id": 6,
+        "img": "https://ibb.co/BwrFxcZ",
+        "course_name": "JavaScript Essentials",
+        "credit_time": "3 hours",
+        "price": "$119.99",
+        "description": "Learn the core concepts of JavaScript, including variables, functions, DOM manipulation, and event handling. Ideal for web developers."
+    },
+    {
+        "id": 7,
+        "img": "https://ibb.co/pxrJbz1",
+        "course_name": "C Programming Basics",
+        "credit_time": "9 hours",
+        "price": "$169.99",
+        "description": "Begin your journey into C programming. Cover syntax, data types, control structures, and object-oriented principles."
+    },
+    {
+        "id": 8,
+        "img": "https://ibb.co/fG1BqqQ",
+        "course_name": "SQL Database Fundamentals",
+        "credit_time": "6 hours",
+        "price": "$139.99",
+        "description": "Discover the basics of SQL database management. Write SQL queries, manage data, and design database schemas."
+    },
+    {
+        "id": 9,
+        "img": "https://ibb.co/7RKCKVy",
+        "course_name": "Python for Data Analysis",
+        "credit_time": "1 hour",
+        "price": "$189.99",
+        "description": "Explore Python's data analysis libraries, including Pandas and Matplotlib. Analyze data sets and create visualizations."
+    }
+]
