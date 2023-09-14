@@ -7,20 +7,21 @@ import swal from 'sweetalert';
 const Home = () => {
 
     const [allCourse, setAllCourse] = useState([]);
+    
+    const [selectedCourse, setSelectedCourse] = useState([]);
 
     useEffect(() => {
         fetch("./data.json")
             .then(res => res.json())
             .then(data => setAllCourse(data))
-    })
+    },[]);
 
 
-    const handleSelectCourse = () => {
-        
+    const handleSelectCourse = (course) => {
+       setSelectedCourse([...selectedCourse, course])
     }
+    console.log(selectedCourse);
 
-
-    console.log(setAllCourse);
 
     return (
         <div>
@@ -37,13 +38,15 @@ const Home = () => {
                                     <h4 className='ml-3 font-medium'>Price: {course.price}</h4>
                                     <h4 className='font-medium'>Credit: {course.credit_time}</h4>
                                 </div>
-                                <button className='bg-indigo-600 mt-4 p-2 px-24 rounded-lg mx-auto text-white font-semibold text-lg'>Select</button>
+                                
+                                <button  
+                                onClick={ () => handleSelectCourse (course)} className='bg-indigo-600 mt-4 p-2 px-24 rounded-lg mx-auto text-white font-semibold text-lg'>Select</button>
                             </div>
                         ))
                     }
                 </div>
                 <div className='w-72 h-min-[100px]'>
-                    <Cart></Cart>
+                    <Cart selectedCourse={selectedCourse}></Cart>
                 </div>
             </div>
         </div>
