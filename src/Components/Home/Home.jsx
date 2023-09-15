@@ -41,7 +41,7 @@ const Home = () => {
     return (
         <div>
             <h1 className='font-bold text-4xl mb-10'>Course Registration</h1>
-            <div className='flex justify-between'>
+            <div className=' justify-between sm:flex-col lg:flex-row'>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-2/3 gap-x-36 gap-y-6' >
                     {
                         allCourse.map((course) => (
