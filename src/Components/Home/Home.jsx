@@ -3,35 +3,32 @@ import { data } from 'autoprefixer';
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import swal from 'sweetalert';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import { faBook } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
-
     const [allCourse, setAllCourse] = useState([]);
-
     const [selectedCourse, setSelectedCourse] = useState([]);
-
-    const [remaining , setRemaining] = useState(20);
-
+    const [remaining, setRemaining] = useState(20);
     const [totalCredit, setTotalCredit] = useState(0);
-
     useEffect(() => {
         fetch("./data.json")
             .then(res => res.json())
             .then(data => setAllCourse(data))
     }, []);
 
-
     const handleSelectCourse = (course) => {
         const isExist = selectedCourse.find(item => item.id === course.id);
-    
+
         if (isExist) {
-            return swal('Taken');
+            return swal("OPS !!", "You have already taken this course!", "warning");
         } else {
             const totalCreditsSelected = selectedCourse.reduce((total, item) => total + item.credit_time, 0);
             const newTotalCredits = totalCreditsSelected + course.credit_time;
-    
+
             if (newTotalCredits > 20) {
-                alert("Cannot select more courses. Total credits exceed the limit (20 credits).");
+                return swal("Sorry !!", "You can't take more then 20 hours credit !", "error")
             } else {
                 setSelectedCourse([...selectedCourse, course]);
                 setTotalCredit(newTotalCredits);
@@ -39,9 +36,6 @@ const Home = () => {
             }
         }
     };
-    
-    
-
 
 
     return (
@@ -56,8 +50,8 @@ const Home = () => {
                                 <h1 className='text-xl font-bold mb-3'>{course.course_name}</h1>
                                 <p className='text-center mb-3'>{course.description}</p>
                                 <div className='flex justify-between'>
-                                    <h4 className='ml-3 font-medium'>Price: {course.price}</h4>
-                                    <h4 className='font-medium'>Credit: {course.credit_time} hr</h4>
+                                    <h4 className='ml-3 font-medium'><FontAwesomeIcon icon={faDollarSign} /> Price: {course.price}</h4>
+                                    <h4 className='font-medium mr-4'> <FontAwesomeIcon icon={faBook} />  Credit: {course.credit_time} hr</h4>
                                 </div>
 
                                 <button
@@ -68,8 +62,8 @@ const Home = () => {
                 </div>
                 <div className='w-72 h-min-[100px]'>
                     <Cart selectedCourse={selectedCourse}
-                    remaining={remaining}
-                    totalCredit={totalCredit}></Cart>
+                        remaining={remaining}
+                        totalCredit={totalCredit}></Cart>
                 </div>
             </div>
         </div>

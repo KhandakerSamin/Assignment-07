@@ -4,10 +4,9 @@ import swal from 'sweetalert';
 import Home from './Components/Home/Home'
 
 function App() {
-
   return (
     <>
-    <Home></Home>
+      <Home></Home>
     </>
   )
 }
